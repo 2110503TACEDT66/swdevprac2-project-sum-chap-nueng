@@ -8,6 +8,8 @@ export async function MyActions( date:string ,camp:string|null,nights:number)  {
     // alert("scioshci")
     // {date,camp,nights} : {date:string ,camp:string,nights:number}
 
+    
+
     const session = await getServerSession(authOptions)
     if (!session || !session.user.token ) return <div>You need to login to book campground</div>
         
@@ -21,6 +23,7 @@ export async function MyActions( date:string ,camp:string|null,nights:number)  {
 
     try {
         await dbConnect()
+        if (date && nights>=1 && nights <=3) {
         const booking = await Booking.create({
           "bookDate" : date,
           'user' : profile.data._id,
@@ -31,6 +34,9 @@ export async function MyActions( date:string ,camp:string|null,nights:number)  {
         })
         
         return booking._id
+      } else {
+        alert("Please check your date and nights")
+      }
       
      } catch (error) {
       console.log(error)
