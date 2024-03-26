@@ -15,11 +15,11 @@ export default async function deleteBooking(id:string,token:string) {
         
         console.log(response)
   
-        if (!response.ok) {
+        // if (!response.ok) {
             
-         throw new Error("Failed to delete campground")
+        //  throw new Error("Failed to delete campground")
   
-        }
+        // }
   
        
    
