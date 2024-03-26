@@ -8,7 +8,7 @@ import { AppDispatch } from "@/redux/store";
 import { addReservation } from "@/redux/cartSlice";
 // import { ReservationItem } from "../../../interfaces";
 import { getServerSession } from "next-auth"
-import { authOptions } from "@/app/api/auth/[...nextauth]/route"
+import { authOptions } from "@/libs/auth";
 import getUserProfile from "@/libs/getUserProfile"
 import { useSession } from "next-auth/react";
 import Image from "next/image";

@@ -1,6 +1,6 @@
 
 import { getServerSession } from "next-auth"
-import { authOptions } from "@/app/api/auth/[...nextauth]/route"
+import { authOptions } from "@/libs/auth"
 import getUserProfile from "@/libs/getUserProfile"
 import Image from "next/image"
 import CampgroundCard from "@/components/CampgroundCard"

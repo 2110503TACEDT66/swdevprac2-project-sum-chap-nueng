@@ -4,7 +4,7 @@ import { AppDispatch,useAppSelector } from "@/redux/store"
 import { useSession } from "next-auth/react";
 import { useDispatch } from "react-redux";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/libs/auth";
 import getBookings from "@/libs/getBookings";
 import Bookinglist from "./bookinglist";
 import deleteBooking from "@/libs/deleteBooking";

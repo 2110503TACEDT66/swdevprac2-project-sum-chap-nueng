@@ -1,6 +1,6 @@
 'use server'
 import { getServerSession } from "next-auth"
-import { authOptions } from "@/app/api/auth/[...nextauth]/route"
+import { authOptions } from "@/libs/auth"
 import getUserProfile from "@/libs/getUserProfile"
 import { dbConnect } from "@/db/dbConnect"
 import Booking from "@/db/models/Booking"

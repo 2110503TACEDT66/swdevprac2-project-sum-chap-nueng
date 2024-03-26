@@ -1,7 +1,7 @@
 
 import { createSlice , PayloadAction } from "@reduxjs/toolkit";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "@/libs/auth";
 import getUserProfile from "@/libs/getUserProfile";
 // import { profile } from "console";
 // import { ReservationItem } from "../../interfaces"

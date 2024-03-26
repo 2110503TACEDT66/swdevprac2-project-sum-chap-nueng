@@ -1,6 +1,6 @@
 import { Dayjs } from "dayjs"
 import { getServerSession } from "next-auth"
-import { authOptions } from "@/app/api/auth/[...nextauth]/route"
+import { authOptions } from "./auth"
 import RefreshAction from "../../refreshAction"
 export default async function editBooking(bookingid:string,date:Dayjs | null,nights:number,campid:string,token:string) {
      
